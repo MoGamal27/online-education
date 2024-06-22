@@ -1,0 +1,31 @@
+backend/
+│
+├── config/                  # Configuration files
+│   ├── db.js                # Database connection
+│   └── default.json         # Default configuration
+│
+├── controllers/             # Controller files
+│   ├── authController.js    # Authentication controller
+│   ├── courseController.js  # Course controller
+│   └── lessonController.js  # Lesson controller
+│
+├── middleware/              # Middleware files
+│   ├── authMiddleware.js    # Authentication middleware
+│   └── errorMiddleware.js   # Error handling middleware
+│
+├── models/                  # Mongoose models
+│   ├── User.js              # User model
+│   ├── Course.js            # Course model
+│   └── Lesson.js            # Lesson model
+│
+├── routes/                  # Route definitions
+│   ├── authRoutes.js        # Authentication routes
+│   ├── courseRoutes.js      # Course routes
+│   └── lessonRoutes.js      # Lesson routes
+│
+├── utils/                   # Utility files
+│   └── generateToken.js     # JWT token generation
+│
+├── .env                     # Environment variables
+├── server.js                # Entry point
+└── package.json             # Dependencies and scripts

@@ -1,0 +1,56 @@
+src/
+│
+├── assets/          # Images, icons, and other assets
+│   └── logo.png
+│
+├── components/      # Reusable components
+│   ├── common/      # Common components (buttons, inputs, etc.)
+│   │   ├── Button.js
+│   │   ├── ProgressBar.js
+│   │   └── ...
+│   ├── auth/        # Authentication components (Login, Register, Profile)
+│   │   ├── Login.js
+│   │   ├── Register.js
+│   │   ├── Profile.js
+│   │   └── ...
+│   ├── dashboard/   # Dashboard components (Student, Instructor, Admin)
+│   │   ├── StudentDashboard.js
+│   │   ├── InstructorDashboard.js
+│   │   ├── AdminDashboard.js
+│   │   └── ...
+│   └── course/      # Course-related components (CourseList, CourseDetail, Lessons, Videos)
+│       ├── CourseList.js
+│       ├── CourseDetail.js
+│       ├── LessonList.js
+│       ├── LessonDetail.js
+│       ├── VideoPlayer.js
+│       └── ...
+│
+├── pages/           # Page components
+│   ├── HomePage.js
+│   ├── CoursesPage.js
+│   ├── CourseDetailPage.js
+│   ├── LessonPage.js
+│   ├── LoginPage.js
+│   ├── RegisterPage.js
+│   ├── DashboardPage.js
+│   ├── ProfilePage.js
+│   ├── NotFoundPage.js
+│   └── ...
+│
+├── services/        # API service files
+│   └── api.js
+│
+├── store/           # Redux store and slices
+│   ├── index.js
+│   ├── userSlice.js
+│   ├── courseSlice.js
+│   ├── lessonSlice.js
+│   └── ...
+│
+├── styles/          # SCSS or CSS files
+│   └── main.css
+│
+├── App.js           # Main app component
+├── index.js         # Entry point
+└── ...
