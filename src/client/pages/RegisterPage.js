@@ -1,6 +1,6 @@
 import React from 'react';
-import Register from '../components/auth/Register';
-import './AuthPage.css';
+import Register from '../component/auth/Register';
+
 
 const RegisterPage = () => (
   <div className="auth-page">

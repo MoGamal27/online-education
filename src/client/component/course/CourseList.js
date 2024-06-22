@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchCourses } from '../../store/courseSlice';
-import './Course.css';
+import { updateProgress } from '../../store/courseSlice';
+
 
 const CourseList = () => {
   const dispatch = useDispatch();
   const courses = useSelector((state) => state.course.courses);
 
   useEffect(() => {
-    dispatch(fetchCourses());
+    dispatch(updateProgress());
   }, [dispatch]);
 
   return (

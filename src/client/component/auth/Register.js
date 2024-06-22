@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from '../../store/userSlice';
-import './Auth.css';
+
 
 const Register = () => {
   const [email, setEmail] = useState('');

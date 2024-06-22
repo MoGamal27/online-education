@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import StudentDashboard from '../components/dashboard/StudentDashboard';
-import InstructorDashboard from '../components/dashboard/InstructorDashboard';
-import AdminDashboard from '../components/dashboard/AdminDashboard';
-import './DashboardPage.css';
+import StudentDashboard from '../component/dashboard/StudentDashboard';
+import InstructorDashboard from '../component/dashboard/InstructorDashboard';
+import AdminDashboard from '../component/dashboard/AdminDashboard';
+
 
 const DashboardPage = () => {
   const role = useSelector((state) => state.user.role);

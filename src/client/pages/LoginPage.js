@@ -1,6 +1,6 @@
 import React from 'react';
-import Login from '../components/auth/Login';
-import './AuthPage.css';
+import Login from '../component/auth/Login';
+
 
 const LoginPage = () => (
   <div className="auth-page">

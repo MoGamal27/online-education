@@ -1,6 +1,5 @@
 import React from 'react';
-import CourseList from '../components/course/CourseList';
-import './CoursesPage.css';
+import CourseList from '../component/course/CourseList';
 
 const CoursesPage = () => (
   <div className="courses-page">

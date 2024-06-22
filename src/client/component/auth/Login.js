@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../../store/userSlice';
-import './Auth.css';
+
 
 const Login = () => {
   const [email, setEmail] = useState('');

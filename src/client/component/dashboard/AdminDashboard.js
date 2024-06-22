@@ -1,5 +1,4 @@
 import React from 'react';
-import './Dashboard.css';
 
 const AdminDashboard = () => (
   <div className="dashboard-container">
