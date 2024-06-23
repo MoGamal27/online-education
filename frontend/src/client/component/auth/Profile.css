@@ -1,0 +1,33 @@
+.profile-container {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+  }
+  
+  .card {
+    border-radius: 1rem;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    color: #495057;
+  }
+  
+  .form-control {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+  }
+  
+  .btn-primary {
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #6a11cb;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2575fc;
+  }
+  

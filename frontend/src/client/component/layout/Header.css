@@ -1,0 +1,47 @@
+/* Header Styles */
+header {
+    background-color: #212529; /* Dark background with a slight blue tint */
+    color: #fff; /* White text for readability */
+    padding: 1rem 2rem; /* Add some padding for spacing */
+    display: flex; /* Allow horizontal layout for logo and navigation */
+    align-items: center; /* Center elements vertically */
+    justify-content: space-between; /* Distribute elements evenly */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Logo Styling */
+  .logo {
+    width: 150px; /* Adjust logo width as needed */
+    height: auto; /* Maintain logo aspect ratio */
+  }
+  
+  /* Navigation Styling */
+  .navbar-nav {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Reset default padding */
+    margin: 0; /* Reset default margin */
+  }
+  
+  .nav-item {
+    margin-right: 1rem; /* Space between navigation items */
+  }
+  
+  .nav-link {
+    color: inherit; /* Inherit text color from header */
+    text-decoration: none; /* Remove underline on link hover */
+    font-weight: bold; /* Bold navigation text for emphasis */
+    transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+  }
+  
+  .nav-link:hover {
+    color: #3399ff; /* Lighter blue for hover effect */
+  }
+  
+  /* Register Link Styling (Optional) */
+  .register-link {
+    background-color: #3399ff; /* Light blue background for register link */
+    color: #fff; /* White text for register link */
+    padding: 0.5rem 1rem; /* Add padding for register link */
+    border-radius: 5px; /* Rounded corners for register link */
+  }
+  
