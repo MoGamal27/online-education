@@ -17,7 +17,9 @@ const App = () => (
   <Router>
    
 
- 
+
+
+
     <div className="app">
       <Header/>
       <MainContent>
@@ -32,7 +34,7 @@ const App = () => (
       </MainContent>
       <Footer/>
     </div>
-    
+   
   </Router>
 );
 
