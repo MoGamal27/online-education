@@ -1,47 +1,316 @@
-/* Header Styles */
-header {
-    background-color: #212529; /* Dark background with a slight blue tint */
-    color: #fff; /* White text for readability */
-    padding: 1rem 2rem; /* Add some padding for spacing */
-    display: flex; /* Allow horizontal layout for logo and navigation */
-    align-items: center; /* Center elements vertically */
-    justify-content: space-between; /* Distribute elements evenly */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+.header {
+  background-color: rgba(248, 248, 248, 0.95);
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header.scrolled {
+  padding: 0.5rem 1rem;
+  background-color: rgba(248, 248, 248, 0.98);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-menu {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 2rem;
+}
+
+.logo img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li {
+  margin-right: 1.5rem;
+  position: relative;
+}
+
+.nav ul li:last-child {
+  margin-right: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn, .register-btn {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-btn::before, .register-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: all 0.5s;
+}
+
+.login-btn:hover::before, .register-btn:hover::before {
+  left: 100%;
+}
+
+.login-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.login-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.register-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.register-btn:hover {
+  background-color: #0056b3;
+}
+
+.user-profile {
+  position: relative;
+}
+
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.user-profile img:hover {
+  transform: scale(1.1);
+}
+
+.dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  border-radius: 4px;
+  overflow: hidden;
+  min-width: 150px;
+  transition: all 0.3s ease;
+  transform: translateY(10px);
+}
+
+.dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown a, .dropdown button {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #333;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropdown a:hover, .dropdown button:hover {
+  background-color: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.dropdown .sign-out {
+  color: #dc3545;
+}
+
+.dropdown .sign-out:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
   }
-  
-  /* Logo Styling */
-  .logo {
-    width: 150px; /* Adjust logo width as needed */
-    height: auto; /* Maintain logo aspect ratio */
+
+  .logo-menu {
+    width: 100%;
+    justify-content: space-between;
   }
-  
-  /* Navigation Styling */
-  .navbar-nav {
-    list-style: none; /* Remove default bullet points */
-    padding: 0; /* Reset default padding */
-    margin: 0; /* Reset default margin */
+
+  .nav {
+    display: none;
+    width: 100%;
   }
-  
-  .nav-item {
-    margin-right: 1rem; /* Space between navigation items */
+
+  .nav.open {
+    display: block;
+    animation: slideDown 0.3s ease-out;
   }
-  
-  .nav-link {
-    color: inherit; /* Inherit text color from header */
-    text-decoration: none; /* Remove underline on link hover */
-    font-weight: bold; /* Bold navigation text for emphasis */
-    transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  
-  .nav-link:hover {
-    color: #3399ff; /* Lighter blue for hover effect */
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
   }
-  
-  /* Register Link Styling (Optional) */
-  .register-link {
-    background-color: #3399ff; /* Light blue background for register link */
-    color: #fff; /* White text for register link */
-    padding: 0.5rem 1rem; /* Add padding for register link */
-    border-radius: 5px; /* Rounded corners for register link */
+
+  .nav ul li {
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
-  
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .user-actions {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .login-btn, .register-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .user-profile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 90%;
+    max-width: 200px;
+  }
+
+  .dropdown.open {
+    transform: translateX(-50%) translateY(0);
+  }
+}

@@ -16,7 +16,7 @@ const Register = () => {
   };
 
   return (
-    <div className="auth-container container-fluid d-flex justify-content-center align-items-center vh-100">
+    <div className="auth-container container-fluid d-flex justify-content-center align-items-center">
       <div className="card p-4 shadow">
         <h2 className="text-center mb-4">Register</h2>
         <form onSubmit={handleSubmit}>

@@ -15,7 +15,7 @@ const Login = () => {
   };
 
   return (
-    <div className="auth-container container-fluid d-flex justify-content-center align-items-center vh-100">
+    <div className="auth-container">
       <div className="card p-4 shadow">
         <h2 className="text-center mb-4">Login</h2>
         <form onSubmit={handleSubmit}>

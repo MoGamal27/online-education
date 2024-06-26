@@ -10,9 +10,14 @@ import './client/styles/main.css';
 import Header from './client/component/layout/Header';
 import Footer from './client/component/layout/Footer';
 import MainContent from './client/component/layout/MainContent';
+import './App.css';
 
 const App = () => (
+
   <Router>
+   
+
+ 
     <div className="app">
       <Header/>
       <MainContent>
@@ -27,6 +32,7 @@ const App = () => (
       </MainContent>
       <Footer/>
     </div>
+    
   </Router>
 );
 
