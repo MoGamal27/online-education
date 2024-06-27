@@ -13,14 +13,12 @@ const CourseSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true,
+  },  
+  category: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Category',
+    required: true,
   },
-  content: [
-    {
-      title: String,
-      videoUrl: String,
-      description: String,
-    },
-  ],
 });
 
 module.exports = mongoose.model('Course', CourseSchema);
